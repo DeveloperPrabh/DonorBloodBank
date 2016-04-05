@@ -7,22 +7,35 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Margin="0,0,-105,0" Background="#FF5C3F3F" RequestedTheme="Light">
-        <TextBlock x:Name="lifeBloodTitle" HorizontalAlignment="Left" Margin="230,175,0,0" TextWrapping="Wrap" Text="LifeBlood Donor Services" VerticalAlignment="Top" FontSize="60" FontFamily="Calibri" Height="65" Width="640" Foreground="#FFFCFCFC" />
-        <Image x:Name="image" HorizontalAlignment="Left" Height="155" Margin="470,45,0,0" VerticalAlignment="Top" Width="155" Source="Assets/lifeblood.png"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="39,320,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" FontSize="21.333" FontFamily="Verdana" Foreground="White"/>
-        <TextBox x:Name="donorNameBox" HorizontalAlignment="Left" Margin="134,320,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Enter Your Name" BorderBrush="White"/>
-        <TextBlock x:Name="ageBlock" HorizontalAlignment="Left" Margin="39,373,0,0" TextWrapping="Wrap" Text="Age:" VerticalAlignment="Top" FontSize="21.333" Foreground="White"/>
-        <TextBox x:Name="donorAgeBox" HorizontalAlignment="Left" Margin="130,373,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" BorderBrush="White" PlaceholderText="Enter Your Age"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="38,435,0,0" TextWrapping="Wrap" Text="Gender" VerticalAlignment="Top" FontSize="21.333" Foreground="White"/>
-        <TextBox x:Name="donorGenderBox" HorizontalAlignment="Left" Margin="134,435,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Enter Your Gender" BorderBrush="White"/>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="38,487,0,0" TextWrapping="Wrap" Text="Blood Type" VerticalAlignment="Top" FontSize="21.333" Foreground="White"/>
-        <TextBox x:Name="donorBloodType" HorizontalAlignment="Left" Margin="174,490,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" BorderBrush="White" PlaceholderText="Enter Blood Type:"/>
-        <TextBlock x:Name="donorCountBlock" HorizontalAlignment="Left" Margin="405,495,0,0" TextWrapping="Wrap" Text="Donor Count:" VerticalAlignment="Top" FontSize="21.333" Foreground="White"/>
-        <TextBlock x:Name="donorCountNumber" HorizontalAlignment="Left" Margin="1074,301,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="18.667"/>
-        <Button x:Name="registerButton" Content="Register Now!" HorizontalAlignment="Left" Margin="72,570,0,0" VerticalAlignment="Top" Click="onRegButtonClicked" Foreground="Black" RequestedTheme="Light" Background="#FFAF9494"/>
-        <TextBlock x:Name="incrementDonorCountBlock" HorizontalAlignment="Left" Margin="539,497,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="21.333" Foreground="White"/>
-        <Button x:Name="resetButton" Content="Reset" HorizontalAlignment="Left" Margin="226,570,0,0" VerticalAlignment="Top" Height="32" Width="104" Click="OnResetButtonClicked" Foreground="Black" Background="#FFAF9494"/>
+    <Grid Background="#FF2C3E50" RequestedTheme="Light" HorizontalAlignment="Left" Width="1280">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="325"/>
+            <RowDefinition Height="315"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="465"/>
+            <ColumnDefinition Width="515"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="lifeBloodTitle" HorizontalAlignment="Left" Margin="20,125,0,0" TextWrapping="Wrap" Text="LifeBlood Donor Services" VerticalAlignment="Top" FontSize="32" FontFamily="Calibri" Height="65" Width="325" Foreground="#FFFCFCFC" Grid.Column="2" />
+        <Image x:Name="image" HorizontalAlignment="Left" Height="110" Margin="65,10,0,0" VerticalAlignment="Top" Width="245" Source="Assets/lifeblood.png" Grid.Column="2"/>
+        <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Name" FontSize="21.333" FontFamily="Verdana" Foreground="White" Margin="44,0,22,289" Grid.Row="1"/>
+        <TextBox x:Name="donorNameBox" TextWrapping="Wrap" Text="" PlaceholderText="Enter Your Name" BorderBrush="{x:Null}" Grid.Column="1" Width="151" Margin="4,3,460,0" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="ageBlock" TextWrapping="Wrap" Text="Age:" FontSize="21.333" Foreground="White" Margin="54,51,53,235" Grid.Row="1"/>
+        <TextBox x:Name="donorAgeBox" TextWrapping="Wrap" Text="" VerticalAlignment="Top" BorderBrush="{x:Null}" PlaceholderText="Enter Your Age" Grid.Column="1" Margin="0,54,0,0" Grid.Row="1"/>
+        <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="Gender" FontSize="21.333" Foreground="White" Margin="41,93,40,193" Grid.Row="1"/>
+        <TextBox x:Name="donorGenderBox" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Enter Your Gender" BorderBrush="{x:Null}" Grid.Column="1" Margin="0,95,0,0" Grid.Row="1"/>
+        <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="Blood Type" FontSize="21.333" Foreground="White" Margin="23,141,22,145" Grid.Row="1"/>
+        <TextBox x:Name="donorBloodType" TextWrapping="Wrap" Text="" BorderBrush="{x:Null}" PlaceholderText="Enter Blood Type:" Grid.Column="1" VerticalAlignment="Top" Margin="0,145,0,0" Grid.Row="1"/>
+        <TextBlock x:Name="donorCountBlock" TextWrapping="Wrap" Text="Donor Count:" FontSize="21.333" Foreground="White" Margin="13,190,10,96" Grid.Row="1"/>
+        <Button x:Name="registerButton" Content="Register Now!" HorizontalAlignment="Left" Margin="23,241,0,0" VerticalAlignment="Top" Click="onRegButtonClicked" Foreground="Black" RequestedTheme="Light" Background="White" Grid.Row="1"/>
+        <TextBlock x:Name="incrementDonorCountBlock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" VerticalAlignment="Center" FontSize="21.333" Foreground="White" Grid.Column="1" Margin="69,188,69,98" Grid.Row="1"/>
+        <Button x:Name="resetButton" Content="Reset" HorizontalAlignment="Left" Margin="29,241,0,0" VerticalAlignment="Top" Height="32" Width="104" Click="OnResetButtonClicked" Foreground="Black" Background="White" Grid.Column="1" Grid.Row="1"/>
+        <ListBox x:Name="bloodListBox" Background="#FF1B1B1B" Foreground="#FFE70606" BorderBrush="{x:Null}" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="45,17,0,25" Width="300" Height="273">
+            <TextBlock x:Name="donorListBlock" TextWrapping="Wrap" Text="LifeBlood Donors" FontSize="21.333" Foreground="White" HorizontalAlignment="Left"/>
+        </ListBox>
 
     </Grid>
 </Page>

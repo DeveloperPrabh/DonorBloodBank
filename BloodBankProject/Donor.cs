@@ -41,7 +41,7 @@ namespace BloodBankProject
             typesOfBlood.Add("B-");
             typesOfBlood.Add("AB+");
             typesOfBlood.Add("AB-");
-            typesOfBlood.Add("O+");
+            typesOfBlood.Add("O-");
             typesOfBlood.Add("O+");
 
             if (typesOfBlood.Contains(donorBloodType))

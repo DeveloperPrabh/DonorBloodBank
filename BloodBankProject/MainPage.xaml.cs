@@ -24,6 +24,8 @@ namespace BloodBankProject
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        
         public MainPage()
         {
             this.InitializeComponent();
@@ -39,8 +41,8 @@ namespace BloodBankProject
 
         private void onRegButtonClicked(object sender, RoutedEventArgs e)
         {
-            //When Register Button is clicked, make the donor object and store its calues
-            
+            //When Register Button is clicked, make the donor object and store its Values
+
             Donor bloodDonor = new Donor();
             bloodDonor._name = donorNameBox.Text;
             int checkAge = Int32.Parse(donorAgeBox.Text);
@@ -57,10 +59,18 @@ namespace BloodBankProject
                 donorCounter += 1;
                 incrementDonorCountBlock.Text = donorCounter.ToString();
                 listOfDonors.Add(bloodDonor);
-
+                MessageDialog donorAddedDlg = new MessageDialog(String.Format("Donor {0} was added. Thank you for donating blood!", bloodDonor._name));
+                donorAddedDlg.ShowAsync();
+                bloodListBox.Items.Add(bloodDonor._name);
+ 
             }
-          
-     
+            
+
+
+
+
+
+
         }
 
         //Reset Button: Clear all values when user clicks the reset button.
@@ -72,6 +82,22 @@ namespace BloodBankProject
             donorGenderBox.Text = "";
             
 
+        }
+
+        private void OnViewDonorClicked(object sender, RoutedEventArgs e)
+        {
+
+
+            
+            
+        }
+
+    
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            
         }
     }
 }
