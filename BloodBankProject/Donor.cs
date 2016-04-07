@@ -57,7 +57,24 @@ namespace BloodBankProject
                 return false;
             }
 
+            //List is built on a top of a array
+            //array variable has a memory address too.
 
+        }
+
+        public bool verifyGender(string donorGender)
+        {
+            if (donorGender == "F" || donorGender == "M")
+            {
+                return true;
+            }
+
+            else
+            {
+                MessageDialog genMsg = new MessageDialog("Gender not recognized. Please try again!");
+                genMsg.ShowAsync();
+                return false;
+            }
         }
     }
 

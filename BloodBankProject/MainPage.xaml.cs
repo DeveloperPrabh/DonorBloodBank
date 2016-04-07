@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -36,21 +37,24 @@ namespace BloodBankProject
         //Initialize a counter to count the number of donors
         public int donorCounter = 0;
         
-        //Initialize a list of donors to store donor objects.
-        List<Donor> listOfDonors = new List<Donor>();
+        
 
         private void onRegButtonClicked(object sender, RoutedEventArgs e)
         {
             //When Register Button is clicked, make the donor object and store its Values
 
             Donor bloodDonor = new Donor();
+            LifeBloodBank bloodBank = new LifeBloodBank();
+            
             bloodDonor._name = donorNameBox.Text;
             int checkAge = Int32.Parse(donorAgeBox.Text);
             string checkBlood = donorBloodType.Text;
+            string checkGender = donorGenderBox.Text;
+
 
 
             // Verify age: donors over age 18 are able to donate also verify blood type
-            if (bloodDonor.verifyAge(checkAge) && bloodDonor.verifyBloodType(checkBlood))
+            if (bloodDonor.verifyAge(checkAge) && bloodDonor.verifyBloodType(checkBlood) && bloodDonor.verifyGender(checkGender))
 
             {
                 bloodDonor._age = Int32.Parse(donorAgeBox.Text);
@@ -58,19 +62,16 @@ namespace BloodBankProject
                 bloodDonor._gender = donorGenderBox.Text;
                 donorCounter += 1;
                 incrementDonorCountBlock.Text = donorCounter.ToString();
-                listOfDonors.Add(bloodDonor);
+                bloodBank.addDonors(bloodDonor);
                 MessageDialog donorAddedDlg = new MessageDialog(String.Format("Donor {0} was added. Thank you for donating blood!", bloodDonor._name));
                 donorAddedDlg.ShowAsync();
                 bloodListBox.Items.Add(bloodDonor._name);
- 
+
+
             }
+
+
             
-
-
-
-
-
-
         }
 
         //Reset Button: Clear all values when user clicks the reset button.
@@ -83,21 +84,32 @@ namespace BloodBankProject
             
 
         }
-
-        private void OnViewDonorClicked(object sender, RoutedEventArgs e)
-        {
-
-
-            
-            
-        }
-
-    
+        
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            NavigationCacheMode = NavigationCacheMode.Enabled;
+            if (Frame.CanGoBack)
+            {
+                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+
+            }
+
+            else
+            {
+                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+            }
+        }
+
+        private void OnGoToViewBloodTypes(object sender, RoutedEventArgs e)
+        {
+            LifeBloodBank bloodBankData = new LifeBloodBank();
+            Donor d = new Donor();
             
+            
+            
+            this.Frame.Navigate(typeof(ViewAvailableBloodType),d);
         }
     }
 }
