@@ -26,7 +26,13 @@ namespace BloodBankProject
     public sealed partial class MainPage : Page
     {
 
-        
+        LifeBloodBank bloodBank = new LifeBloodBank();
+        List<string> bTypeList = new List<string>();
+
+        //Initialize a counter to count the number of donors
+        public int donorCounter = 0;
+
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -34,8 +40,7 @@ namespace BloodBankProject
             
         }
 
-        //Initialize a counter to count the number of donors
-        public int donorCounter = 0;
+ 
         
         
 
@@ -44,7 +49,7 @@ namespace BloodBankProject
             //When Register Button is clicked, make the donor object and store its Values
 
             Donor bloodDonor = new Donor();
-            LifeBloodBank bloodBank = new LifeBloodBank();
+            
             
             bloodDonor._name = donorNameBox.Text;
             int checkAge = Int32.Parse(donorAgeBox.Text);
@@ -63,12 +68,16 @@ namespace BloodBankProject
                 donorCounter += 1;
                 incrementDonorCountBlock.Text = donorCounter.ToString();
                 bloodBank.addDonors(bloodDonor);
+                bloodBank.bloodTypeList.Add(bloodDonor._bloodType);
                 MessageDialog donorAddedDlg = new MessageDialog(String.Format("Donor {0} was added. Thank you for donating blood!", bloodDonor._name));
                 donorAddedDlg.ShowAsync();
                 bloodListBox.Items.Add(bloodDonor._name);
+                
 
 
             }
+
+            bTypeList = bloodBank.bloodTypeList;
 
 
             
@@ -104,12 +113,13 @@ namespace BloodBankProject
 
         private void OnGoToViewBloodTypes(object sender, RoutedEventArgs e)
         {
-            LifeBloodBank bloodBankData = new LifeBloodBank();
-            Donor d = new Donor();
+            LifeBloodBank bBank = new LifeBloodBank()
+            {
+                bloodTypeList = bTypeList
+            };
             
             
-            
-            this.Frame.Navigate(typeof(ViewAvailableBloodType),d);
+            this.Frame.Navigate(typeof(ViewAvailableBloodType),bBank);
         }
     }
 }

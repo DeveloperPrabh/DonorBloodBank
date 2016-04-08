@@ -9,27 +9,28 @@ namespace BloodBankProject
     class LifeBloodBank
 
     {
-        public List<Donor> _lifeBloodList;
-        //initalize a new list to store the names of blood type of donors.
-        public List<string> _typeOfBloodGroupList = new List<string>();
-        
+        private List<Donor> _lifeBloodList;
+        public List<string> bloodTypeList = new List<string>();
+
+
 
         public LifeBloodBank()
         {
-            List<Donor> _lifeBloodList = new List<Donor>();
-            this._lifeBloodList = _lifeBloodList;
+            _lifeBloodList = new List<Donor>();
+            
 
         }
 
         public void addDonors(Donor bloodDonor)
         {
             // Create new Donor Object
-            this._lifeBloodList.Add(bloodDonor);
-            this._typeOfBloodGroupList.Add(bloodDonor._bloodType);
+            _lifeBloodList.Add(bloodDonor);
+           
 
 
         }
 
+        /*
         public void showAvailableBloodType()
         {
             //Objective: Get the count of available blood types available for donation
@@ -42,13 +43,11 @@ namespace BloodBankProject
             int bloodTypeBNegCounter = 0;
 
 
-            foreach (string x in this._typeOfBloodGroupList)
+            foreach (string x in _lifeBloodList)
             {
                 if (x == "A+")
                 {
                     bloodTypeAPosCounter += 1;
-
-
 
                 }
 
@@ -80,6 +79,7 @@ namespace BloodBankProject
 
 
         }
+        */
         
     }
 

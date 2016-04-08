@@ -23,8 +23,19 @@ namespace BloodBankProject
     /// </summary>
     public sealed partial class ViewAvailableBloodType : Page
     {
-        private Donor getDonor;
-        private LifeBloodBank bloodTypeInBank;
+
+        private LifeBloodBank bloodBankObj;
+
+        int bloodTypeAPlusCounter = 0;
+        int bloodTypeANegCounter = 0;
+        int bloodTypeBPlusCounter = 0;
+        int bloodTypeBNegCounter = 0;
+        int bloodTypeABPlusCounter = 0;
+        int bloodTypeABNegCounter = 0;
+        int bloodTypeOPlusCounter = 0;
+        int bloodTypeONegCounter = 0;
+
+
         public ViewAvailableBloodType()
         {
             this.InitializeComponent();
@@ -38,20 +49,66 @@ namespace BloodBankProject
         {
             base.OnNavigatedTo(e);
 
-            Donor getDonor = e.Parameter as Donor;
+            LifeBloodBank bloodBankObj = e.Parameter as LifeBloodBank;
             
             
-
-            if (Frame.CanGoBack)
+            foreach (string x in bloodBankObj.bloodTypeList)
             {
-                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+                if (x == "A+")
+                {
+                    bloodTypeAPlusCounter += 1;
+                    abPlusCounter.Text = bloodTypeAPlusCounter.ToString();
+                }
+
+                else if (x == "A-")
+                {
+                    bloodTypeANegCounter += 1;
+                    aNegCounter.Text = bloodTypeANegCounter.ToString();
+                }
+
+                else if (x == "B+")
+                {
+                    bloodTypeBPlusCounter += 1;
+                    bPlusCounter.Text = bloodTypeBPlusCounter.ToString();
+                }
+
+                else if (x == "B-")
+                {
+                    bloodTypeBNegCounter += 1;
+                    bNegCounter.Text = bloodTypeBNegCounter.ToString();
+                }
+
+                else if (x == "AB+")
+                {
+                    bloodTypeABPlusCounter += 1;
+                    abPlusCounter.Text = bloodTypeABPlusCounter.ToString();
+                }
+
+                else if (x == "AB-")
+                {
+                    bloodTypeABNegCounter += 1;
+                    abNegCounter.Text = bloodTypeABNegCounter.ToString();
+                }
+
+                else if (x == "O+")
+                {
+                    bloodTypeOPlusCounter += 1;
+                    oPlusCounter.Text = bloodTypeOPlusCounter.ToString();
+                }
+
+                else if ( x == "O-")
+                {
+                    bloodTypeONegCounter += 1;
+                    oNegCounter.Text = bloodTypeONegCounter.ToString();
+                    
+                }
 
             }
+            
 
-            else
-            {
-                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
-            }
+           
+
+            
 
            
             }
