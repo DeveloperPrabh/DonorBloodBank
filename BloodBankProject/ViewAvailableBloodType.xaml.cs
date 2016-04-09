@@ -57,7 +57,7 @@ namespace BloodBankProject
                 if (x == "A+")
                 {
                     bloodTypeAPlusCounter += 1;
-                    abPlusCounter.Text = bloodTypeAPlusCounter.ToString();
+                    aPlusCounter.Text = bloodTypeAPlusCounter.ToString();
                 }
 
                 else if (x == "A-")

@@ -9,25 +9,26 @@
 
     <Grid Background="#FF2C3E50">
         <Grid.RowDefinitions>
-            <RowDefinition Height="22*"/>
-            <RowDefinition Height="9*"/>
-            <RowDefinition Height="113*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="49*"/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="aPlusBlock" HorizontalAlignment="Left" Margin="100,83,0,0" TextWrapping="Wrap" Text="A+" VerticalAlignment="Top" Height="25" Width="45" FontSize="21.333" Foreground="White"/>
-        <TextBlock x:Name="aPlusCounter" HorizontalAlignment="Left" Margin="105,20,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="21.333" Foreground="White" Grid.Row="1" Grid.RowSpan="2"/>
-        <TextBlock x:Name="bPlusBlock" HorizontalAlignment="Left" Margin="246,85,0,0" TextWrapping="Wrap" Text="B+" VerticalAlignment="Top" Foreground="#FFF9F3F3" FontSize="21.333" Grid.RowSpan="2"/>
-        <TextBlock x:Name="bPlusCounter" HorizontalAlignment="Left" Margin="250,21,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Grid.Row="1" Grid.RowSpan="2"/>
-        <TextBlock x:Name="aNegBlock" HorizontalAlignment="Left" Margin="179,85,0,0" TextWrapping="Wrap" Text="A-" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Grid.RowSpan="2"/>
-        <TextBlock x:Name="aNegCounter" HorizontalAlignment="Left" Margin="181,20,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Grid.Row="1" Grid.RowSpan="2"/>
-        <TextBlock x:Name="bNegBlock" HorizontalAlignment="Left" Margin="310,86,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="B-" VerticalAlignment="Top" Foreground="White" FontSize="21.333"/>
-        <TextBlock x:Name="bNegCounter" HorizontalAlignment="Left" Margin="313,22,0,0" Grid.Row="1" Grid.RowSpan="2" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="White" FontSize="21.333"/>
-        <TextBlock x:Name="abPlusBlock" HorizontalAlignment="Left" Margin="374,86,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="AB+" VerticalAlignment="Top" Foreground="White" FontSize="21.333"/>
-        <TextBlock x:Name="abPlusCounter" HorizontalAlignment="Left" Margin="386,22,0,0" Grid.Row="1" Grid.RowSpan="2" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="White" FontSize="21.333"/>
-        <TextBlock x:Name="abNegBlock" HorizontalAlignment="Left" Margin="456,86,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="AB-" VerticalAlignment="Top" Foreground="White" FontSize="21.333"/>
-        <TextBlock x:Name="abNegCounter" HorizontalAlignment="Left" Margin="469,22,0,0" Grid.Row="1" Grid.RowSpan="2" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="White" FontSize="21.333"/>
-        <TextBlock x:Name="oPlusBlock" HorizontalAlignment="Left" Margin="537,84,0,0" TextWrapping="Wrap" Text="O+" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Grid.RowSpan="2"/>
-        <TextBlock x:Name="oPlusCounter" HorizontalAlignment="Left" Margin="547,22,0,0" Grid.Row="1" Grid.RowSpan="2" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="White" FontSize="21.333"/>
-        <TextBlock x:Name="oNegBlock" HorizontalAlignment="Left" Margin="615,86,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="O-" VerticalAlignment="Top" Foreground="White" FontSize="21.333"/>
-        <TextBlock x:Name="oNegCounter" HorizontalAlignment="Left" Margin="620,22,0,0" Grid.Row="1" Grid.RowSpan="2" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="White" FontSize="21.333"/>
+        <TextBlock x:Name="aPlusBlock" HorizontalAlignment="Left" Margin="97,156,0,0" TextWrapping="Wrap" Text="A+" VerticalAlignment="Top" Height="25" Width="45" FontSize="21.333" Foreground="White" Grid.RowSpan="2"/>
+        <TextBlock x:Name="aPlusCounter" HorizontalAlignment="Left" Margin="103,25,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="21.333" Foreground="White" Grid.Row="1" Height="28" Width="11" Grid.RowSpan="2"/>
+        <TextBlock x:Name="bPlusBlock" HorizontalAlignment="Left" Margin="245,155,0,0" TextWrapping="Wrap" Text="B+" VerticalAlignment="Top" Foreground="#FFF9F3F3" FontSize="21.333" Height="28" Width="27" Grid.RowSpan="2"/>
+        <TextBlock x:Name="bPlusCounter" HorizontalAlignment="Left" Margin="250,26,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Grid.Row="1" Height="28" Width="11" Grid.RowSpan="2"/>
+        <TextBlock x:Name="aNegBlock" HorizontalAlignment="Left" Margin="181,156,0,0" TextWrapping="Wrap" Text="A-" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Height="28" Width="22" Grid.RowSpan="2"/>
+        <TextBlock x:Name="aNegCounter" HorizontalAlignment="Left" Margin="181,26,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Grid.Row="1" Height="28" Width="11" Grid.RowSpan="2"/>
+        <TextBlock x:Name="bNegBlock" HorizontalAlignment="Left" Margin="311,156,0,0" TextWrapping="Wrap" Text="B-" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Height="28" Width="21" Grid.RowSpan="2"/>
+        <TextBlock x:Name="bNegCounter" HorizontalAlignment="Left" Margin="313,26,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Height="28" Width="11" Grid.RowSpan="2"/>
+        <TextBlock x:Name="abPlusBlock" HorizontalAlignment="Left" Margin="375,156,0,0" TextWrapping="Wrap" Text="AB+" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Height="28" Width="41" Grid.RowSpan="2"/>
+        <TextBlock x:Name="abPlusCounter" HorizontalAlignment="Left" Margin="386,26,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Height="28" Width="11" Grid.RowSpan="2"/>
+        <TextBlock x:Name="abNegBlock" HorizontalAlignment="Left" Margin="460,157,0,0" TextWrapping="Wrap" Text="AB-" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Height="28" Width="35" Grid.RowSpan="2"/>
+        <TextBlock x:Name="abNegCounter" HorizontalAlignment="Left" Margin="469,26,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Height="28" Width="11" Grid.RowSpan="2"/>
+        <TextBlock x:Name="oPlusBlock" HorizontalAlignment="Left" Margin="539,156,0,0" TextWrapping="Wrap" Text="O+" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Height="28" Width="31" Grid.RowSpan="2"/>
+        <TextBlock x:Name="oPlusCounter" HorizontalAlignment="Left" Margin="547,26,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Height="28" Width="11" Grid.RowSpan="2"/>
+        <TextBlock x:Name="oNegBlock" HorizontalAlignment="Left" Margin="615,156,0,0" TextWrapping="Wrap" Text="O-" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Height="28" Width="25" Grid.RowSpan="2"/>
+        <TextBlock x:Name="oNegCounter" HorizontalAlignment="Left" Margin="620,25,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="White" FontSize="21.333" Height="28" Width="11" Grid.RowSpan="2"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="97,75,0,0" TextWrapping="Wrap" Text="Blood Types Available" VerticalAlignment="Top" Height="60" Width="415" Foreground="White" FontSize="42.667"/>
     </Grid>
 </Page>

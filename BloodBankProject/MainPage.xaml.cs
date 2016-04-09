@@ -36,8 +36,9 @@ namespace BloodBankProject
         public MainPage()
         {
             this.InitializeComponent();
-            
-            
+            NavigationCacheMode = NavigationCacheMode.Required;
+
+
         }
 
  
@@ -113,6 +114,7 @@ namespace BloodBankProject
 
         private void OnGoToViewBloodTypes(object sender, RoutedEventArgs e)
         {
+            //Iintialize LifeBloodBank object
             LifeBloodBank bBank = new LifeBloodBank()
             {
                 bloodTypeList = bTypeList
